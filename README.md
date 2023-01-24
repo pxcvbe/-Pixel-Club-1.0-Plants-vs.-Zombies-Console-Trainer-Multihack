@@ -8,9 +8,9 @@ This is simple console trainer multihacks for Plants vs. Zombies **(GOTY)** Stea
 ![screenShot_pvz_multihack_console_trainer_madeBy_pxcvbe](https://user-images.githubusercontent.com/85774070/214208164-32f67828-1c6f-4a67-834a-f76da373b106.png)
 
 ## How to Use the Programs?
-> + Open the trainer in the Debug folder *\pvz - hacks - educational purpose only\Release\pvz - hacks - educational purpose only.exe*
++ Open the trainer in the Debug folder *\pvz - hacks - educational purpose only\Release\pvz - hacks - educational purpose only.exe*
 
-> + Open the game and press the key for the options you want, for example you press the "F1" key, and you got **9999** Sun
++ Open the game and press the key for the options you want, for example you press the "F1" key, and you got **9999** Sun
 
 ## How to Build or Compile the project using Visual Studio!
 + Downloads the ZIP/RAR File, Then open the folder *pvz - hacks - educational purpose only*
@@ -27,6 +27,7 @@ This is simple console trainer multihacks for Plants vs. Zombies **(GOTY)** Stea
 
 ## Preview the hacks!
 ![result-console-trainer-pvz-multihack-1 0](https://user-images.githubusercontent.com/85774070/214305928-4da2390e-a3d7-4726-ae36-f66e09ddf2e8.png)
+
 
 
 ![result-console-trainer-pvz-multihack-1 0 (2)](https://user-images.githubusercontent.com/85774070/214305894-ececf0ce-0ef0-4103-8002-7c7c81d522b8.png)
