@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files\include">
+      <UniqueIdentifier>{bee655a6-05db-40f6-920b-776cea589a03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\include\shellcode">
+      <UniqueIdentifier>{7383a444-6a32-4ebc-8b29-5ff7ff0fcb85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\include\color">
+      <UniqueIdentifier>{0a3fc470-3b87-4d46-a00e-e701d91f704a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\include\variables">
+      <UniqueIdentifier>{e2056d7b-1db8-4c67-bf3f-c475b0a09dd0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="include\shellcode\shellcode.c">
+      <Filter>Header Files\include\shellcode</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\variable\variable.h">
+      <Filter>Header Files\include\variables</Filter>
+    </ClInclude>
+    <ClInclude Include="include\color\color.hpp">
+      <Filter>Header Files\include\color</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

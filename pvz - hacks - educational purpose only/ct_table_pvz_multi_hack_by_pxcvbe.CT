@@ -1,0 +1,1167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="42">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>19</ID>
+      <Description>"[Plants vs. Zombies] Created by: pxcvbe"</Description>
+      <Options moHideChildren="1"/>
+      <Color>FF8080</Color>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>6</ID>
+          <Description>"Sun Pointer List --&gt;"</Description>
+          <Options moHideChildren="1"/>
+          <Color>8000FF</Color>
+          <GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>2</ID>
+              <Description>"sun ptr1"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <Color>0080FF</Color>
+              <VariableType>4 Bytes</VariableType>
+              <Address>popcapgame1.exe+331C50</Address>
+              <Offsets>
+                <Offset>5578</Offset>
+                <Offset>4</Offset>
+                <Offset>178</Offset>
+                <Offset>868</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>3</ID>
+              <Description>"sun ptr2"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <Color>0080FF</Color>
+              <VariableType>4 Bytes</VariableType>
+              <Address>popcapgame1.exe+331CDC</Address>
+              <Offsets>
+                <Offset>5578</Offset>
+                <Offset>4</Offset>
+                <Offset>178</Offset>
+                <Offset>868</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>4</ID>
+              <Description>"sun ptr3"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <Color>0080FF</Color>
+              <VariableType>4 Bytes</VariableType>
+              <Address>popcapgame1.exe+331D08</Address>
+              <Offsets>
+                <Offset>5578</Offset>
+                <Offset>4</Offset>
+                <Offset>178</Offset>
+                <Offset>868</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>5</ID>
+              <Description>"sun ptr4"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <Color>0080FF</Color>
+              <VariableType>4 Bytes</VariableType>
+              <Address>popcapgame1.exe+331DA0</Address>
+              <Offsets>
+                <Offset>5578</Offset>
+                <Offset>4</Offset>
+                <Offset>178</Offset>
+                <Offset>868</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>13</ID>
+              <Description>"When you click the sun drop, it give you 5000 Sun"</Description>
+              <Color>FF0000</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>{ Game   : popcapgame1.exe
+  Version: 
+  Date   : 2023-01-01
+  Author : User
+
+  This script does blah blah blah
+}
+
+[ENABLE]
+
+aobscanmodule(sun_add,popcapgame1.exe,01 88 78 55 00 00) // should be unique
+alloc(newmem,$1000)
+
+label(return)
+
+newmem:
+  add [eax+00005578],(int)5000
+  jmp return
+
+sun_add:
+  jmp newmem
+  nop
+return:
+registersymbol(sun_add)
+
+[DISABLE]
+
+sun_add:
+  db 01 88 78 55 00 00
+
+unregistersymbol(sun_add)
+dealloc(newmem)
+
+{
+// ORIGINAL CODE - INJECTION POINT: popcapgame1.exe+1F4D0
+
+popcapgame1.exe+1F4C4: C2 04 00                       - ret 0004
+popcapgame1.exe+1F4C7: CC                             - int 3 
+popcapgame1.exe+1F4C8: CC                             - int 3 
+popcapgame1.exe+1F4C9: CC                             - int 3 
+popcapgame1.exe+1F4CA: CC                             - int 3 
+popcapgame1.exe+1F4CB: CC                             - int 3 
+popcapgame1.exe+1F4CC: CC                             - int 3 
+popcapgame1.exe+1F4CD: CC                             - int 3 
+popcapgame1.exe+1F4CE: CC                             - int 3 
+popcapgame1.exe+1F4CF: CC                             - int 3 
+// ---------- INJECTING HERE ----------
+popcapgame1.exe+1F4D0: 01 88 78 55 00 00              - add [eax+00005578],ecx
+// ---------- DONE INJECTING  ----------
+popcapgame1.exe+1F4D6: 8B 88 78 55 00 00              - mov ecx,[eax+00005578]
+popcapgame1.exe+1F4DC: 83 EC 0C                       - sub esp,0C
+popcapgame1.exe+1F4DF: 81 F9 06 27 00 00              - cmp ecx,00002706
+popcapgame1.exe+1F4E5: 7E 0A                          - jle popcapgame1.exe+1F4F1
+popcapgame1.exe+1F4E7: C7 80 78 55 00 00 06 27 00 00  - mov [eax+00005578],00002706
+popcapgame1.exe+1F4F1: 81 B8 78 55 00 00 40 1F 00 00  - cmp [eax+00005578],00001F40
+popcapgame1.exe+1F4FB: 7C 32                          - jl popcapgame1.exe+1F52F
+popcapgame1.exe+1F4FD: 8B 80 A4 00 00 00              - mov eax,[eax+000000A4]
+popcapgame1.exe+1F503: 8B 88 4C 09 00 00              - mov ecx,[eax+0000094C]
+popcapgame1.exe+1F509: C6 44 24 04 01                 - mov byte ptr [esp+04],01
+}
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>14</ID>
+              <Description>"When you do plants get 5000 Sun"</Description>
+              <Color>FF0000</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>{ Game   : popcapgame1.exe
+  Version: 
+  Date   : 2023-01-02
+  Author : User
+
+  This script does blah blah blah
+}
+
+[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+
+ 
+ 
+aobscanmodule(sun_subtract,popcapgame1.exe,89 B7 78 55 00 00) // should be unique
+alloc(newmem,$1000)
+
+label(return)
+
+newmem:
+
+  mov [edi+00005578],#5000
+  jmp return
+
+sun_subtract:
+  jmp newmem
+  nop
+return:
+registersymbol(sun_subtract)
+
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+sun_subtract:
+  db 89 B7 78 55 00 00
+
+unregistersymbol(sun_subtract)
+dealloc(newmem)
+
+{
+// ORIGINAL CODE - INJECTION POINT: popcapgame1.exe+1F636
+
+popcapgame1.exe+1F61E: CC                             - int 3 
+popcapgame1.exe+1F61F: CC                             - int 3 
+popcapgame1.exe+1F620: 56                             - push esi
+popcapgame1.exe+1F621: 8B B7 78 55 00 00              - mov esi,[edi+00005578]
+popcapgame1.exe+1F627: 8B D7                          - mov edx,edi
+popcapgame1.exe+1F629: E8 12 FF FF FF                 - call popcapgame1.exe+1F540
+popcapgame1.exe+1F62E: 03 C6                          - add eax,esi
+popcapgame1.exe+1F630: 3B D8                          - cmp ebx,eax
+popcapgame1.exe+1F632: 7F 0C                          - jg popcapgame1.exe+1F640
+popcapgame1.exe+1F634: 2B F3                          - sub esi,ebx
+// ---------- INJECTING HERE ----------
+popcapgame1.exe+1F636: 89 B7 78 55 00 00              - mov [edi+00005578],esi
+// ---------- DONE INJECTING  ----------
+popcapgame1.exe+1F63C: B0 01                          - mov al,01
+popcapgame1.exe+1F63E: 5E                             - pop esi
+popcapgame1.exe+1F63F: C3                             - ret 
+popcapgame1.exe+1F640: 8B 8F A4 00 00 00              - mov ecx,[edi+000000A4]
+popcapgame1.exe+1F646: 8B 01                          - mov eax,[ecx]
+popcapgame1.exe+1F648: 8B 15 F0 F8 72 00              - mov edx,[popcapgame1.exe+32F8F0]
+popcapgame1.exe+1F64E: 8B 80 D8 00 00 00              - mov eax,[eax+000000D8]
+popcapgame1.exe+1F654: 52                             - push edx
+popcapgame1.exe+1F655: FF D0                          - call eax
+popcapgame1.exe+1F657: C7 87 90 55 00 00 46 00 00 00  - mov [edi+00005590],00000046
+}
+</AssemblerScript>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>43</ID>
+          <Description>"Money Status:"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <Color>0080FF</Color>
+          <VariableType>4 Bytes</VariableType>
+          <Address>popcapgame1.exe+331C50</Address>
+          <Offsets>
+            <Offset>54</Offset>
+            <Offset>94C</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>45</ID>
+          <Description>"Plant Structure --&gt;"</Description>
+          <Options moHideChildren="1"/>
+          <Color>8000FF</Color>
+          <GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>18</ID>
+              <Description>"Auto Collect Sun"</Description>
+              <Color>0000FF</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode:
+jmp popcapgame1.exe+352FD
+mov edi,ebx
+call popcapgame1.exe+34850
+
+exit:
+jmp returnhere
+
+"popcapgame1.exe"+352F2:
+jmp newmem
+nop 4
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+"popcapgame1.exe"+352F2:
+jne popcapgame1.exe+352FD
+mov edi,ebx
+call popcapgame1.exe+34850
+//Alt: db 75 09 8B FB E8 55 F5 FF FF
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>35</ID>
+              <Description>"Sunflowers generate sun faster"</Description>
+              <Color>0000FF</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode:
+mov [edi+58],20
+mov eax,[edi]
+
+exit:
+jmp returnhere
+
+"popcapgame1.exe"+65E46:
+jmp newmem
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+"popcapgame1.exe"+65E46:
+mov [edi+58],eax
+mov eax,[edi]
+//Alt: db 89 47 58 8B 07
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>11</ID>
+              <Description>"No Duration (Recharge Plants)"</Description>
+              <Color>0000FF</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode:
+jg popcapgame1.exe+958DB
+mov [edi+24],00000000
+
+exit:
+jmp returnhere
+
+"popcapgame1.exe"+958C5:
+jmp newmem
+nop 4
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+"popcapgame1.exe"+958C5:
+jle popcapgame1.exe+958DB
+mov [edi+24],00000000
+//Alt: db 7E 14 C7 47 24 00 00 00 00
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>50</ID>
+              <Description>"Shoot -&gt;"</Description>
+              <Options moHideChildren="1"/>
+              <Color>FF0080</Color>
+              <GroupHeader>1</GroupHeader>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>32</ID>
+                  <Description>"Rapid Fire"</Description>
+                  <Color>004080</Color>
+                  <VariableType>Auto Assembler Script</VariableType>
+                  <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode:
+mov [esi+58],#37
+cmp eax,12
+
+exit:
+jmp returnhere
+
+"popcapgame1.exe"+65C0C:
+jmp newmem
+nop
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+"popcapgame1.exe"+65C0C:
+mov [esi+58],ecx
+cmp eax,12
+//Alt: db 89 4E 58 83 F8 12
+</AssemblerScript>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>33</ID>
+                  <Description>"Burst Fire"</Description>
+                  <Color>004080</Color>
+                  <VariableType>Auto Assembler Script</VariableType>
+                  <AssemblerScript>{ Game   : popcapgame1.exe
+  Version: 
+  Date   : 2023-01-02
+  Author : User
+
+  This script does blah blah blah
+}
+
+[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+
+ 
+ 
+aobscanmodule(burst_fire_plants,popcapgame1.exe,0F 85 98 FE FF FF) // should be unique
+alloc(newmem,$1000)
+
+label(return)
+
+newmem:
+  jb popcapgame1.exe+6AD62
+  jmp return
+
+burst_fire_plants:
+  jmp newmem
+  nop
+return:
+registersymbol(burst_fire_plants)
+
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+burst_fire_plants:
+  db 0F 85 98 FE FF FF
+
+unregistersymbol(burst_fire_plants)
+dealloc(newmem)
+
+{
+// ORIGINAL CODE - INJECTION POINT: popcapgame1.exe+6AEC4
+
+popcapgame1.exe+6AEA2: 33 C9                 - xor ecx,ecx
+popcapgame1.exe+6AEA4: E8 B7 2B 00 00        - call popcapgame1.exe+6DA60
+popcapgame1.exe+6AEA9: 85 C0                 - test eax,eax
+popcapgame1.exe+6AEAB: 0F 84 B1 FE FF FF     - je popcapgame1.exe+6AD62
+popcapgame1.exe+6AEB1: 8B 4F 1C              - mov ecx,[edi+1C]
+popcapgame1.exe+6AEB4: 6A 00                 - push 00
+popcapgame1.exe+6AEB6: 51                    - push ecx
+popcapgame1.exe+6AEB7: 50                    - push eax
+popcapgame1.exe+6AEB8: E9 9F FE FF FF        - jmp popcapgame1.exe+6AD5C
+popcapgame1.exe+6AEBD: 83 BF 90 00 00 00 01  - cmp dword ptr [edi+00000090],01
+// ---------- INJECTING HERE ----------
+popcapgame1.exe+6AEC4: 0F 85 98 FE FF FF     - jne popcapgame1.exe+6AD62
+// ---------- DONE INJECTING  ----------
+popcapgame1.exe+6AECA: 83 F8 12              - cmp eax,12
+popcapgame1.exe+6AECD: 0F 85 8B 00 00 00     - jne popcapgame1.exe+6AF5E
+popcapgame1.exe+6AED3: 8B 5F 1C              - mov ebx,[edi+1C]
+popcapgame1.exe+6AED6: 8B 37                 - mov esi,[edi]
+popcapgame1.exe+6AED8: 8D 53 FF              - lea edx,[ebx-01]
+popcapgame1.exe+6AEDB: 89 54 24 14           - mov [esp+14],edx
+popcapgame1.exe+6AEDF: 8B 97 9C 00 00 00     - mov edx,[edi+0000009C]
+popcapgame1.exe+6AEE5: 8B C6                 - mov eax,esi
+popcapgame1.exe+6AEE7: E8 F4 E5 FE FF        - call popcapgame1.exe+594E0
+popcapgame1.exe+6AEEC: 8B 97 A0 00 00 00     - mov edx,[edi+000000A0]
+}
+</AssemblerScript>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>51</ID>
+              <Description>"Planting -&gt;"</Description>
+              <Options moHideChildren="1"/>
+              <Color>FF0080</Color>
+              <GroupHeader>1</GroupHeader>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>46</ID>
+                  <Description>"Plants Anywhere"</Description>
+                  <Color>0000FF</Color>
+                  <VariableType>Auto Assembler Script</VariableType>
+                  <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode:
+jmp popcapgame1.exe+13C75
+
+exit:
+jmp returnhere
+
+"popcapgame1.exe"+1334F:
+jmp newmem
+nop
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+"popcapgame1.exe"+1334F:
+je popcapgame1.exe+13C75
+//Alt: db 0F 84 20 09 00 00
+</AssemblerScript>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>48</ID>
+                  <Description>"Multi Plants"</Description>
+                  <Color>0000FF</Color>
+                  <VariableType>Auto Assembler Script</VariableType>
+                  <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode:
+//je popcapgame1.exe+140F0
+nop 6
+
+exit:
+jmp returnhere
+
+"popcapgame1.exe"+14007:
+jmp newmem
+nop
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+"popcapgame1.exe"+14007:
+jne popcapgame1.exe+140F0
+//Alt: db 0F 85 E3 00 00 00
+</AssemblerScript>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>49</ID>
+                  <Description>"Can't remove plants"</Description>
+                  <Color>0000FF</Color>
+                  <VariableType>Auto Assembler Script</VariableType>
+                  <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode:
+//jne popcapgame1.exe+10890
+
+exit:
+jmp returnhere
+
+"popcapgame1.exe"+10923:
+jmp newmem
+nop
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+"popcapgame1.exe"+10923:
+jne popcapgame1.exe+10890
+//Alt: db 0F 85 67 FF FF FF
+</AssemblerScript>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>53</ID>
+              <Description>"Invicible Plants (Health ++)"</Description>
+              <Color>0000FF</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode:
+add dword ptr [esi+40],04
+mov ecx,[esi+40]
+
+exit:
+jmp returnhere
+
+"popcapgame1.exe"+1447A0:
+jmp newmem
+nop 2
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+"popcapgame1.exe"+1447A0:
+add dword ptr [esi+40],-04
+mov ecx,[esi+40]
+//Alt: db 83 46 40 FC 8B 4E 40
+</AssemblerScript>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>44</ID>
+          <Description>"Zombie Structure --&gt;"</Description>
+          <Options moHideChildren="1"/>
+          <Color>8000FF</Color>
+          <GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>37</ID>
+              <Description>"One Hit's Zombie [Normal &amp; Stick Zombies]"</Description>
+              <Color>0000FF</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem: //this is allocated memory, you have read,write,execute access
+mov [edi+000000C8],00000 // give 0 health to normal zombies when get hit
+
+originalcode:
+//mov [edi+000000C8],ebp // normal values is inside "ebp" registers
+
+exit:
+jmp returnhere
+
+"popcapgame1.exe"+145E04:
+jmp newmem
+nop
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+"popcapgame1.exe"+145E04:
+mov [edi+000000C8],ebp
+//Alt: db 89 AF C8 00 00 00
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>38</ID>
+              <Description>"Fast Kill Conehat Zombies"</Description>
+              <Color>0000FF</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem: //this is allocated memory, you have read,write,execute access
+mov [ebp+000000D0],00000 // we give 0 health 'values' to Conehat Zombies
+
+originalcode:
+//mov [ebp+000000D0],ecx // normal value is inside "ecx" registers
+
+exit:
+jmp returnhere
+
+"popcapgame1.exe"+145B1A:
+jmp newmem
+nop
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+"popcapgame1.exe"+145B1A:
+mov [ebp+000000D0],ecx
+//Alt: db 89 8D D0 00 00 00
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>41</ID>
+              <Description>"Fast Kill Door Zombies"</Description>
+              <Color>0000FF</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem: //this is allocated memory, you have read,write,execute access
+sub [esi+000000DC],(int)5000 // we subtract '5000' health into Door Zombie health's
+
+originalcode:
+//sub [esi+000000DC],eax // value health is inside "eax" registers
+
+exit:
+jmp returnhere
+
+"popcapgame1.exe"+145771:
+jmp newmem
+nop
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+"popcapgame1.exe"+145771:
+sub [esi+000000DC],eax
+//Alt: db 29 86 DC 00 00 00
+</AssemblerScript>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+  </CheatEntries>
+  <CheatCodes>
+    <CodeEntry>
+      <Description>Duration Card :inc [edi+24]</Description>
+      <AddressString>popcapgame1.exe+958BC</AddressString>
+      <Before>
+        <Byte>7F</Byte>
+        <Byte>49</Byte>
+        <Byte>00</Byte>
+        <Byte>74</Byte>
+        <Byte>1F</Byte>
+      </Before>
+      <Actual>
+        <Byte>FF</Byte>
+        <Byte>47</Byte>
+        <Byte>24</Byte>
+      </Actual>
+      <After>
+        <Byte>8B</Byte>
+        <Byte>47</Byte>
+        <Byte>24</Byte>
+        <Byte>3B</Byte>
+        <Byte>47</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Jump Equal, [Duration Card]</Description>
+      <AddressString>popcapgame1.exe+958BA</AddressString>
+      <Before>
+        <Byte>25</Byte>
+        <Byte>80</Byte>
+        <Byte>7F</Byte>
+        <Byte>49</Byte>
+        <Byte>00</Byte>
+      </Before>
+      <Actual>
+        <Byte>74</Byte>
+        <Byte>1F</Byte>
+      </Actual>
+      <After>
+        <Byte>FF</Byte>
+        <Byte>47</Byte>
+        <Byte>24</Byte>
+        <Byte>8B</Byte>
+        <Byte>47</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Collect Sun [Jump not Equal]</Description>
+      <AddressString>popcapgame1.exe+352F2</AddressString>
+      <Before>
+        <Byte>16</Byte>
+        <Byte>80</Byte>
+        <Byte>7B</Byte>
+        <Byte>50</Byte>
+        <Byte>00</Byte>
+      </Before>
+      <Actual>
+        <Byte>75</Byte>
+        <Byte>09</Byte>
+      </Actual>
+      <After>
+        <Byte>8B</Byte>
+        <Byte>FB</Byte>
+        <Byte>E8</Byte>
+        <Byte>55</Byte>
+        <Byte>F5</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Fire Ratio [Jump not Equal]</Description>
+      <AddressString>popcapgame1.exe+6AEC4</AddressString>
+      <Before>
+        <Byte>90</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>01</Byte>
+      </Before>
+      <Actual>
+        <Byte>0F</Byte>
+        <Byte>85</Byte>
+        <Byte>98</Byte>
+        <Byte>FE</Byte>
+        <Byte>FF</Byte>
+        <Byte>FF</Byte>
+      </Actual>
+      <After>
+        <Byte>83</Byte>
+        <Byte>F8</Byte>
+        <Byte>12</Byte>
+        <Byte>0F</Byte>
+        <Byte>85</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Rapid Fire : mov [esi+58],ecx</Description>
+      <AddressString>popcapgame1.exe+65C0C</AddressString>
+      <Before>
+        <Byte>46</Byte>
+        <Byte>24</Byte>
+        <Byte>83</Byte>
+        <Byte>C4</Byte>
+        <Byte>04</Byte>
+      </Before>
+      <Actual>
+        <Byte>89</Byte>
+        <Byte>4E</Byte>
+        <Byte>58</Byte>
+      </Actual>
+      <After>
+        <Byte>83</Byte>
+        <Byte>F8</Byte>
+        <Byte>12</Byte>
+        <Byte>75</Byte>
+        <Byte>0C</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Sun Generated Value</Description>
+      <AddressString>popcapgame1.exe+65E46</AddressString>
+      <Before>
+        <Byte>F4</Byte>
+        <Byte>19</Byte>
+        <Byte>00</Byte>
+        <Byte>03</Byte>
+        <Byte>C6</Byte>
+      </Before>
+      <Actual>
+        <Byte>89</Byte>
+        <Byte>47</Byte>
+        <Byte>58</Byte>
+      </Actual>
+      <After>
+        <Byte>8B</Byte>
+        <Byte>07</Byte>
+        <Byte>83</Byte>
+        <Byte>C4</Byte>
+        <Byte>04</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>OneHit Normal Zombies [Copy]</Description>
+      <AddressString>popcapgame1.exe+145E04</AddressString>
+      <Before>
+        <Byte>44</Byte>
+        <Byte>24</Byte>
+        <Byte>10</Byte>
+        <Byte>8B</Byte>
+        <Byte>C7</Byte>
+      </Before>
+      <Actual>
+        <Byte>89</Byte>
+        <Byte>AF</Byte>
+        <Byte>C8</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Actual>
+      <After>
+        <Byte>E8</Byte>
+        <Byte>61</Byte>
+        <Byte>C3</Byte>
+        <Byte>FF</Byte>
+        <Byte>FF</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Subtract Health Normal Zombies</Description>
+      <AddressString>popcapgame1.exe+145DFA</AddressString>
+      <Before>
+        <Byte>E8</Byte>
+        <Byte>76</Byte>
+        <Byte>C3</Byte>
+        <Byte>FF</Byte>
+        <Byte>FF</Byte>
+      </Before>
+      <Actual>
+        <Byte>2B</Byte>
+        <Byte>6C</Byte>
+        <Byte>24</Byte>
+        <Byte>20</Byte>
+      </Actual>
+      <After>
+        <Byte>89</Byte>
+        <Byte>44</Byte>
+        <Byte>24</Byte>
+        <Byte>10</Byte>
+        <Byte>8B</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>OneHit Zombies ConeHat [Copy]</Description>
+      <AddressString>popcapgame1.exe+145B1A</AddressString>
+      <Before>
+        <Byte>C8</Byte>
+        <Byte>89</Byte>
+        <Byte>74</Byte>
+        <Byte>24</Byte>
+        <Byte>0C</Byte>
+      </Before>
+      <Actual>
+        <Byte>89</Byte>
+        <Byte>8D</Byte>
+        <Byte>D0</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Actual>
+      <After>
+        <Byte>F6</Byte>
+        <Byte>C3</Byte>
+        <Byte>04</Byte>
+        <Byte>74</Byte>
+        <Byte>09</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Subtract Health Zombie Conehat</Description>
+      <AddressString>popcapgame1.exe+145B14</AddressString>
+      <Before>
+        <Byte>02</Byte>
+        <Byte>8B</Byte>
+        <Byte>C6</Byte>
+        <Byte>2B</Byte>
+        <Byte>F0</Byte>
+      </Before>
+      <Actual>
+        <Byte>2B</Byte>
+        <Byte>C8</Byte>
+      </Actual>
+      <After>
+        <Byte>89</Byte>
+        <Byte>74</Byte>
+        <Byte>24</Byte>
+        <Byte>0C</Byte>
+        <Byte>89</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Subtract Health Door Zombies </Description>
+      <AddressString>popcapgame1.exe+145771</AddressString>
+      <Before>
+        <Byte>02</Byte>
+        <Byte>8B</Byte>
+        <Byte>C2</Byte>
+        <Byte>2B</Byte>
+        <Byte>D0</Byte>
+      </Before>
+      <Actual>
+        <Byte>29</Byte>
+        <Byte>86</Byte>
+        <Byte>DC</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Actual>
+      <After>
+        <Byte>8B</Byte>
+        <Byte>BE</Byte>
+        <Byte>DC</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>GetMoney Click</Description>
+      <AddressString>popcapgame1.exe+3478C</AddressString>
+      <Before>
+        <Byte>80</Byte>
+        <Byte>4C</Byte>
+        <Byte>09</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Before>
+      <Actual>
+        <Byte>01</Byte>
+        <Byte>50</Byte>
+        <Byte>54</Byte>
+      </Actual>
+      <After>
+        <Byte>8B</Byte>
+        <Byte>48</Byte>
+        <Byte>54</Byte>
+        <Byte>81</Byte>
+        <Byte>F9</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Plants Anywhere</Description>
+      <AddressString>popcapgame1.exe+1334F</AddressString>
+      <Before>
+        <Byte>E1</Byte>
+        <Byte>FF</Byte>
+        <Byte>FF</Byte>
+        <Byte>85</Byte>
+        <Byte>C0</Byte>
+      </Before>
+      <Actual>
+        <Byte>0F</Byte>
+        <Byte>84</Byte>
+        <Byte>20</Byte>
+        <Byte>09</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Actual>
+      <After>
+        <Byte>83</Byte>
+        <Byte>F8</Byte>
+        <Byte>02</Byte>
+        <Byte>75</Byte>
+        <Byte>50</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Muti Plants (Jump not Equal)</Description>
+      <AddressString>popcapgame1.exe+14007</AddressString>
+      <Before>
+        <Byte>18</Byte>
+        <Byte>09</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>1B</Byte>
+      </Before>
+      <Actual>
+        <Byte>0F</Byte>
+        <Byte>85</Byte>
+        <Byte>E3</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Actual>
+      <After>
+        <Byte>8B</Byte>
+        <Byte>5C</Byte>
+        <Byte>24</Byte>
+        <Byte>20</Byte>
+        <Byte>33</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Remove Plants (Jump not Equal)</Description>
+      <AddressString>popcapgame1.exe+10923</AddressString>
+      <Before>
+        <Byte>FB</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>84</Byte>
+        <Byte>C0</Byte>
+      </Before>
+      <Actual>
+        <Byte>0F</Byte>
+        <Byte>85</Byte>
+        <Byte>67</Byte>
+        <Byte>FF</Byte>
+        <Byte>FF</Byte>
+        <Byte>FF</Byte>
+      </Actual>
+      <After>
+        <Byte>5F</Byte>
+        <Byte>5E</Byte>
+        <Byte>5D</Byte>
+        <Byte>C2</Byte>
+        <Byte>08</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>add 4 to decrease the health [Plants]</Description>
+      <AddressString>popcapgame1.exe+1447A0</AddressString>
+      <Before>
+        <Byte>E8</Byte>
+        <Byte>F0</Byte>
+        <Byte>B7</Byte>
+        <Byte>EC</Byte>
+        <Byte>FF</Byte>
+      </Before>
+      <Actual>
+        <Byte>83</Byte>
+        <Byte>46</Byte>
+        <Byte>40</Byte>
+        <Byte>FC</Byte>
+      </Actual>
+      <After>
+        <Byte>8B</Byte>
+        <Byte>4E</Byte>
+        <Byte>40</Byte>
+        <Byte>C7</Byte>
+        <Byte>86</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Place Zombie to Our Plants [NOP]</Description>
+      <AddressString>popcapgame1.exe+132ED</AddressString>
+      <Before>
+        <Byte>5D</Byte>
+        <Byte>04</Byte>
+        <Byte>00</Byte>
+        <Byte>84</Byte>
+        <Byte>C0</Byte>
+      </Before>
+      <Actual>
+        <Byte>74</Byte>
+        <Byte>14</Byte>
+      </Actual>
+      <After>
+        <Byte>8B</Byte>
+        <Byte>85</Byte>
+        <Byte>78</Byte>
+        <Byte>01</Byte>
+        <Byte>00</Byte>
+      </After>
+    </CodeEntry>
+  </CheatCodes>
+  <UserdefinedSymbols/>
+</CheatTable>
