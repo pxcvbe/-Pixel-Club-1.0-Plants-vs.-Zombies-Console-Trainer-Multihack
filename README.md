@@ -13,15 +13,16 @@ This is simple console trainer multihacks for Plants vs. Zombies **(GOTY)** Stea
 + Open the game and press the key for the options you want, for example you press the "F1" key, and you got **9999** Sun
 
 ## How to Build or Compile the project using Visual Studio!
-+ Downloads the ZIP/RAR File, Then open the folder *pvz - hacks - educational purpose only*
-+ And open the solutions file *.sln*
-
-+ After the Visual Studio Window poped up, you look at this window, called "Solution Explorer"
 
 ### Install the project
 ```bash
 git clone https://github.com/pxcvbe/-Pixel-Club-1.0-Plants-vs.-Zombies-Console-Trainer-Multihack.git
 ```
+
++ Downloads the ZIP/RAR File, Then open the folder *pvz - hacks - educational purpose only*
++ And open the solutions file *.sln*
+
++ After the Visual Studio Window poped up, you look at this window, called "Solution Explorer"
 
 ![ss-solution-explorer](https://user-images.githubusercontent.com/85774070/214298365-45315507-4311-4ff0-a07c-07da18e2a540.png)
 
