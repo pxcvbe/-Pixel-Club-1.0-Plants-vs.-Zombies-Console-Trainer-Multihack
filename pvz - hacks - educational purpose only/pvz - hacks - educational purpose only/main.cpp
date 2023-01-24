@@ -388,11 +388,10 @@ bool WriteToMemory(HANDLE hProcHandle)
 	}
 	// Planting Anywhere
 	if (plants_anywhere) {
-		//ShellCode_InjectionsWithRET(hProcHandle, (uintptr_t*)plants_anywhere_baseAddress, (BYTE*)ShellCodePlantsAnywhere, sizeof(ShellCodePlantsAnywhere));
-		WriteProcessMemory(hProcHandle, (uintptr_t*)plants_anywhere_baseAddress, (BYTE*)plants_anywhere_JNL, len_opcode_planting, NULL);
+		WriteProcessMemory(hProcHandle, (uintptr_t*)plants_anywhere_baseAddress, plants_anywhere_JNL, len_opcode_planting, NULL);
 	}
 	else {
-		WriteProcessMemory(hProcHandle, (uintptr_t*)plants_anywhere_baseAddress, (BYTE*)plants_anywhere_defaultOpCode, len_opcode_planting, NULL);
+		WriteProcessMemory(hProcHandle, (uintptr_t*)plants_anywhere_baseAddress, plants_anywhere_defaultOpCode, len_opcode_planting, NULL);
 	}
 	// Multi Planting
 	if (multi_plants) {
