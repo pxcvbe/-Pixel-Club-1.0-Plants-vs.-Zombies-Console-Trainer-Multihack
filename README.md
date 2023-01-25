@@ -1,6 +1,6 @@
 ![pvz-multi-hack-mr-robot-font](https://user-images.githubusercontent.com/85774070/214290715-63e0afcd-63ef-45ac-91fa-951bfe8f56ec.png)
 #
-**C++ Plants vs. Zombies Trainer [Pixel-Club 1.0]  "Made By pxcvbe"**
+**C++ Plants vs. Zombies Trainer [Pixel-Club 1.0]  ["Made By pxcvbe"](https://github.com/pxcvbe)**
 
 # What is this?
 This is simple console trainer multihacks for Plants vs. Zombies **(GOTY)** Steam Version made in C++
@@ -38,8 +38,8 @@ git clone https://github.com/pxcvbe/-Pixel-Club-1.0-Plants-vs.-Zombies-Console-T
 
 
 ## Authors & Special Thanks
-* [WN59](https://github.com/WN59) (for template console trainer at "[AssaultCube-Hacks](https://github.com/guykrinsky/AssultCube-Hacks)")
+* [WN59](https://github.com/WN59) (for template console trainer at "[AssaultCube-Hacks](https://github.com/WN59/Assault-Cube-Console-Trainer-)")
+* [Daniel Ramalho](https://github.com/King-cpp) (for detours external using shellcode)
 * [aafulei](https://github.com/aafulei) for "[(color-console)](https://github.com/aafulei/color-console)"
-* [MySelf :)](https://github.com/pxcvbe)
 * [ascii.today](https://ascii.today/)
 * [kammerl.de/ascii](https://www.kammerl.de/ascii/AsciiSignature.php)
