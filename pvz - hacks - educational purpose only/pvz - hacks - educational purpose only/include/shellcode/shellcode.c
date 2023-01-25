@@ -45,12 +45,3 @@ unsigned char ShellCodeZombie3[] = // Door Zombie
 	0xC3                                                        //ret 
 };
 /// </END>
-
-/// <SHELLCODE INJECTION VARS>(Planting Anywhere)
-unsigned char ShellCodePlantsAnywhere[] =
-{
-	0x0F, 0x8D, 0x6F, 0x3C, 0x95, 0xF1,  //jnl 00413C75
-    0x68, 0x55, 0x33, 0x41, 0x00,        //push 00413355
-    0xC3                                 //ret 
-};
-/// </END>
