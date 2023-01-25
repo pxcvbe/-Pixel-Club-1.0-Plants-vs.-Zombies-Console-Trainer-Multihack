@@ -38,7 +38,7 @@ git clone https://github.com/pxcvbe/-Pixel-Club-1.0-Plants-vs.-Zombies-Console-T
 
 
 ## Authors & Special Thanks
-* [WN59](https://github.com/WN59) (for template console trainer at "[AssaultCube-Hacks](https://github.com/guykrinsky/AssultCube-Hacks)"
+* [WN59](https://github.com/WN59) (for template console trainer at "[AssaultCube-Hacks](https://github.com/guykrinsky/AssultCube-Hacks)")
 * [aafulei](https://github.com/aafulei) for "[(color-console)](https://github.com/aafulei/color-console)"
 * [MySelf :)](https://github.com/pxcvbe)
 * [ascii.today](https://ascii.today/)
